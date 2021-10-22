@@ -5,8 +5,8 @@ import { receiveAllPokemon } from './actions/pokemon_actions';
 import configureStore from './store/store'
 
 document.addEventListener('DOMContentLoaded', () => {
-    const rootEl = document.getElementById('root');
     const store = configureStore();
+    const rootEl = document.getElementById('root');
 
     window.fetchAllPokemon = fetchAllPokemon;
     window.receiveAllPokemon = receiveAllPokemon;

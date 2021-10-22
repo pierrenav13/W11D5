@@ -37,8 +37,13 @@ var requestAllPokemon = function requestAllPokemon() {
 /*!**************************************!*\
   !*** ./frontend/middleware/thunk.js ***!
   \**************************************/
-/***/ (() => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
 var thunk = function thunk(store) {
   return function (next) {
     return function (action) {
@@ -50,6 +55,8 @@ var thunk = function thunk(store) {
     };
   };
 };
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (thunk);
 
 /***/ }),
 
@@ -152,14 +159,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var redux_logger__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! redux-logger */ "./node_modules/redux-logger/dist/redux-logger.js");
 /* harmony import */ var redux_logger__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(redux_logger__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _middleware_thunk__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../middleware/thunk */ "./frontend/middleware/thunk.js");
-/* harmony import */ var _middleware_thunk__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_middleware_thunk__WEBPACK_IMPORTED_MODULE_2__);
 
 
 
 
 
 var configureStore = function configureStore() {
-  return (0,redux__WEBPACK_IMPORTED_MODULE_3__.createStore)(_reducers_root_reducer__WEBPACK_IMPORTED_MODULE_0__["default"], (0,redux__WEBPACK_IMPORTED_MODULE_3__.applyMiddleware)((_middleware_thunk__WEBPACK_IMPORTED_MODULE_2___default()), (redux_logger__WEBPACK_IMPORTED_MODULE_1___default())));
+  return (0,redux__WEBPACK_IMPORTED_MODULE_3__.createStore)(_reducers_root_reducer__WEBPACK_IMPORTED_MODULE_0__["default"], (0,redux__WEBPACK_IMPORTED_MODULE_3__.applyMiddleware)(_middleware_thunk__WEBPACK_IMPORTED_MODULE_2__["default"], (redux_logger__WEBPACK_IMPORTED_MODULE_1___default())));
 };
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (configureStore);
@@ -30903,8 +30909,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 document.addEventListener('DOMContentLoaded', function () {
-  var rootEl = document.getElementById('root');
   var store = (0,_store_store__WEBPACK_IMPORTED_MODULE_4__["default"])();
+  var rootEl = document.getElementById('root');
   window.fetchAllPokemon = _util_api_util__WEBPACK_IMPORTED_MODULE_2__.fetchAllPokemon;
   window.receiveAllPokemon = _actions_pokemon_actions__WEBPACK_IMPORTED_MODULE_3__.receiveAllPokemon;
   window.getState = store.getState;
