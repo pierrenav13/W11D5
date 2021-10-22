@@ -1,5 +1,5 @@
 require 'rails_helper'
-
+ 
 describe 'Guests Bonus' do
   it 'index shows only guests between 40 and 50' do
     get '/api/guests'
